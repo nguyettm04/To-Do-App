@@ -3,7 +3,9 @@
     <AddTaskForm />
   </div>
   <nav class="filter">
-    <h2 class="name">TODOLIST</h2>
+    <h2 class="name">
+      <span class="green-tag">TODO</span>APP
+    </h2>
     <!-- <button @click="toDoStore.$reset">Reset</button> -->
     <button class="b-all" @click="filter = 'all'" :class="{ all: filter === 'all' }">All
       ({{ toDoStore.totalCount }})</button>
@@ -52,6 +54,14 @@ export default {
 </script>
 
 <style scoped>
+.name {
+  max-width: 640px;
+}
+
+.green-tag {
+  color: #2a9d8f;
+}
+
 .title {
   text-align: center;
   color: palevioletred;
@@ -69,7 +79,7 @@ export default {
 .name {
   font-size: 40px;
   font-style: italic;
-  font-weight: 444;
+  font-weight: 500;
   flex-grow: 2;
   margin: 0px auto;
 }
@@ -104,4 +114,5 @@ export default {
 
 .b-completed {
   border-color: #06d6a0;
-}</style>
+}
+</style>
