@@ -1,7 +1,5 @@
 <template>
-  <div class="new-task-form">
-    <AddTaskForm />
-  </div>
+  
   <nav class="filter">
     <h2 class="name">
       <span class="green-tag">TODO</span>APP
@@ -15,6 +13,9 @@
       ({{ toDoStore.completedCount }})</button>
 
   </nav>
+  <div class="new-task-form">
+    <AddTaskForm />
+  </div>
 
   <div v-if="filter === 'all'">
     <div class="task-list" v-for="toDoItem in todo">
@@ -71,6 +72,7 @@ export default {
   max-height: fit-content;
   max-width: 640px;
   margin: 2px auto;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
